@@ -112,7 +112,7 @@ def quest_1_4():
             dict_of_chars[char] = input_str.count(char)
 
     for key in dict_of_chars:
-        count_of_chars += dict_of_chars[key] #gets total # of chars
+        count_of_chars += dict_of_chars[key]
         if dict_of_chars[key] % 2 != 0:
             odd_char_ctr += 1
             odd_char = key
@@ -120,9 +120,9 @@ def quest_1_4():
     if odd_char_ctr > 1:
         print("Output:  False, the input string has no possible permutations")
     else:
-        while count_of_chars > 0: #if even no then the palendrome is taken care of if one is left then incert into final space
+        while count_of_chars > 0:
             for key in dict_of_chars:
-                if dict_of_chars[key] % 2 == 0:
+                if dict_of_chars[key] > 1:
                     while list_of_input[left_str_index] == " ":
                         left_str_index += 1
                     while list_of_input[right_str_index] == " ":
@@ -138,14 +138,22 @@ def quest_1_4():
                     dict_of_chars[key] -= 1
                     count_of_chars -= 1
 
-            while list_of_input[left_str_index] == " ": #this does nothing think about it
-                left_str_index += 1
-                print(left_str_index)
-                print(odd_char)
+            # Only need to increment from one side becuase all the even-paired
+            # chars have been used already, all thats left is the odd_char
+            # which will replace the first non-whitespaced index in the
+            # list. left_str_index and right_str_index have converged
+            # this final push will insert the odd_char
+            if list_of_input[left_str_index] == " ":
+                while list_of_input[left_str_index] == " ":
+                    left_str_index += 1
+                list_of_input[left_str_index] = odd_char
+                count_of_chars -= 1
+            else:
                 list_of_input[left_str_index] = odd_char
                 count_of_chars -= 1
 
-        print (list_of_input)
+        output_str = "".join(list_of_input)
+        print ("Output:  True (permutations: \"" + output_str + "\", etc.)")
 
 
 def quest_1_5():
