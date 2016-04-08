@@ -119,16 +119,15 @@ def quest_1_4():
 
     if odd_char_ctr > 1:
         print("Output:  False, the input string has no possible permutations")
-    else: # change from here
+    else:
         while count_of_chars > 0: #if even no then the palendrome is taken care of if one is left then incert into final space
             for key in dict_of_chars:
-                if dict_of_chars[key] > 1: #might have to chhange here to get spaces accounted for
+                if dict_of_chars[key] % 2 == 0:
                     while list_of_input[left_str_index] == " ":
                         left_str_index += 1
                     while list_of_input[right_str_index] == " ":
                         right_str_index -= 1
 
-                    #if
                     list_of_input[left_str_index] = key
                     left_str_index += 1
                     dict_of_chars[key] -= 1
@@ -139,10 +138,12 @@ def quest_1_4():
                     dict_of_chars[key] -= 1
                     count_of_chars -= 1
 
-            list_of_input[left_str_index] = odd_char
-            count_of_chars -= 1
-
-            #count_of_chars -= 2 #has to change
+            while list_of_input[left_str_index] == " ": #this does nothing think about it
+                left_str_index += 1
+                print(left_str_index)
+                print(odd_char)
+                list_of_input[left_str_index] = odd_char
+                count_of_chars -= 1
 
         print (list_of_input)
 
