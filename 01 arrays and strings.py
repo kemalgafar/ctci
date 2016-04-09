@@ -172,6 +172,26 @@ def quest_1_5():
     pale,    bake     -> false
     """
 
+    return_val = None
+    replace_ctr = 0 #To return true, this value has to be <= 1
+    insert_remove_ctr = 0
+
+    str_one = input("Please enter in the first string.\n>>\t")
+    str_two = input("Please enter in the second string.\n>>\t")
+
+    if len(str_one) == len(str_two):
+        for i, char in enumerate(str_one):
+            if str_one[i] != str_two[i]:
+                replace_ctr += 1
+    else:
+        if len(str_one) > len(str_two): #BAD PRACTICE?
+            str_one, str_two = str_two, str_one # Makes sure that str_one is always less than str_two
+        for i, char in enumerate(str_one):
+            while str_one[i] != str_two[i]:
+
+
+
+
 
 def quest_1_6():
     """
@@ -217,4 +237,5 @@ def quest_1_9():
 #quest_1_1()
 #quest_1_2()
 #quest_1_3()
-quest_1_4()
+#quest_1_4()
+quest_1_5()
