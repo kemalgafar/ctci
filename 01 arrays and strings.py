@@ -103,7 +103,7 @@ def quest_1_4():
     right_str_index = -1
     count_of_chars = 0
 
-    input_str = input("Please enter in the test string.\n>>\t")
+    input_str = input("Please enter in the test string.\n>>\t").lower()
 
     list_of_input = list(input_str)
 
