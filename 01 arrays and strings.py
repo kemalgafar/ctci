@@ -148,8 +148,9 @@ def quest_1_4():
                 list_of_input[left_str_index] = odd_char
                 count_of_chars -= 1
             else:
-                list_of_input[left_str_index] = odd_char
-                count_of_chars -= 1
+                if odd_char != None: # Needed in the case of even str length
+                    list_of_input[left_str_index] = odd_char
+                    count_of_chars -= 1
 
         output_str = "".join(list_of_input)
         print ("Output:  True (permutations: \"" + output_str + "\", etc.)")
@@ -190,8 +191,6 @@ def quest_1_5():
         str_one_ctr = 0
             while insert_remove_ctr <= 1:
             str_one[i] != str_two[i]:
-
-
 
 
 
