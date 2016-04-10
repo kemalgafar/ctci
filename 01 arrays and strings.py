@@ -178,14 +178,19 @@ def quest_1_5():
     str_one = input("Please enter in the first string.\n>>\t")
     str_two = input("Please enter in the second string.\n>>\t")
 
+    # Handles Replacemnt and zero-edits
     if len(str_one) == len(str_two):
         for i, char in enumerate(str_one):
             if str_one[i] != str_two[i]:
                 edits_ctr += 1
+    # Handles char inserts and removals. Insures that there is max one char
+    # addition. Char inserts/removals become the same problem by always
+    # assigning the smaller string to str_one then checking againt the longer
+    # string (str_two)
     else:
-        if abs(len(str_one) - len(str_two)) < 2:   #takes care of possibility of more than 1 edit away strings, return_val wont change
-            if len(str_one) > len(str_two): #BAD PRACTICE?
-                str_one, str_two = str_two, str_one # Makes sure that str_one is always less than str_two
+        if abs(len(str_one) - len(str_two)) < 2:
+            if len(str_one) > len(str_two):
+                str_one, str_two = str_two, str_one
                 str_two_index = 0
                 for i, char in enumerate(str_one):
                     while str_one[i] != str_two[str_two_index]:
