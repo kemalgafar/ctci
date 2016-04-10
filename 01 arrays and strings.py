@@ -217,6 +217,23 @@ def quest_1_6():
     assume the string has only uppercase and lowercase letters (a-z)
     """
 
+    output_str = ""
+    ref_char = ""
+    i_shift = 0
+    i = 0
+
+    test_str = input("Please enter in a string.\n>>\t")
+
+    while i < len(test_str):
+        char_ctr = 0
+        while test_str[i] == test_str[i_shift]:
+            ref_char = test_str[i_shift]
+            char_ctr += 1
+            i_shift += 1
+        output_str += (ref_char + str(char_ctr))
+        i = i_shift + 1
+        i += 1
+    print(output_str)
 
 def quest_1_7():
     """
@@ -251,4 +268,5 @@ def quest_1_9():
 #quest_1_2()
 #quest_1_3()
 #quest_1_4()
-quest_1_5()
+#quest_1_5()
+quest_1_6()
