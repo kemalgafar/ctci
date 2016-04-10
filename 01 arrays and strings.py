@@ -172,9 +172,8 @@ def quest_1_5():
     pale,    bake     -> false
     """
 
-    return_val = None
-    replace_ctr = 0 #To return true, this value has to be <= 1
-    insert_remove_ctr = 0
+    return_val = False
+    edits_ctr = 0
 
     str_one = input("Please enter in the first string.\n>>\t")
     str_two = input("Please enter in the second string.\n>>\t")
@@ -182,16 +181,24 @@ def quest_1_5():
     if len(str_one) == len(str_two):
         for i, char in enumerate(str_one):
             if str_one[i] != str_two[i]:
-                replace_ctr += 1
-    elif: abs(len(str_one) - len(str_two)) > 1:
-        return_val = False
+                edits_ctr += 1
     else:
-        if len(str_one) > len(str_two): #BAD PRACTICE?
-            str_one, str_two = str_two, str_one # Makes sure that str_one is always less than str_two
-        str_one_ctr = 0
-            while insert_remove_ctr <= 1:
-            str_one[i] != str_two[i]:
+        if abs(len(str_one) - len(str_two)) < 2:   #takes care of possibility of more than 1 edit away strings, return_val wont change
+            if len(str_one) > len(str_two): #BAD PRACTICE?
+                str_one, str_two = str_two, str_one # Makes sure that str_one is always less than str_two
+                str_two_index = 0
+                for i, char in enumerate(str_one):
+                    while str_one[i] != str_two[str_two_index]:
+                        edits_ctr += 1
+                        str_two_index += 1
+                    str_two_index += 1
+        else:
+            edits_ctr = abs(len(str_one) - len(str_two))
 
+    if edits_ctr < 2:
+        return_val = True
+
+    print(str_two + ",\t" + str_one + "\t->  " + str(return_val).lower())
 
 
 def quest_1_6():
