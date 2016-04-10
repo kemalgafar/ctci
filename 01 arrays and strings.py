@@ -130,13 +130,12 @@ def quest_1_4():
 
                     list_of_input[left_str_index] = key
                     left_str_index += 1
-                    dict_of_chars[key] -= 1
-                    count_of_chars -= 1
 
                     list_of_input[right_str_index] = key
                     right_str_index -= 1
-                    dict_of_chars[key] -= 1
-                    count_of_chars -= 1
+
+                    dict_of_chars[key] -= 2
+                    count_of_chars -= 2
 
             # Only need to increment from one side becuase all the even-paired
             # chars have been used already, all thats left is the odd_char
@@ -183,11 +182,14 @@ def quest_1_5():
         for i, char in enumerate(str_one):
             if str_one[i] != str_two[i]:
                 replace_ctr += 1
+    elif: abs(len(str_one) - len(str_two)) > 1:
+        return_val = False
     else:
         if len(str_one) > len(str_two): #BAD PRACTICE?
             str_one, str_two = str_two, str_one # Makes sure that str_one is always less than str_two
-        for i, char in enumerate(str_one):
-            while str_one[i] != str_two[i]:
+        str_one_ctr = 0
+            while insert_remove_ctr <= 1:
+            str_one[i] != str_two[i]:
 
 
 
