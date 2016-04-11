@@ -191,12 +191,12 @@ def quest_1_5():
         if abs(len(str_one) - len(str_two)) < 2:
             if len(str_one) > len(str_two):
                 str_one, str_two = str_two, str_one
-                str_two_index = 0
-                for i, char in enumerate(str_one):
-                    while str_one[i] != str_two[str_two_index]:
-                        edits_ctr += 1
-                        str_two_index += 1
+            str_two_index = 0
+            for i, char in enumerate(str_one):
+                while str_one[i] != str_two[str_two_index]:
+                    edits_ctr += 1
                     str_two_index += 1
+                str_two_index += 1
         else:
             edits_ctr = abs(len(str_one) - len(str_two))
 
@@ -266,10 +266,18 @@ def quest_1_9():
     rotation of "erbottlewat")
     """
 
+    str_one = input("Please enter in a string.\n>>\t")
+    str_two = input("Please enter in a string.\n>>\t")
+
+    def isSubstring(str_one, str_two):
+
 
 #quest_1_1()
 #quest_1_2()
 #quest_1_3()
 #quest_1_4()
 #quest_1_5()
-quest_1_6()
+#quest_1_6()
+
+
+#quest_1_9()
