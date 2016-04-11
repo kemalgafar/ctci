@@ -25,7 +25,6 @@ def quest_2_2():
     """
 
 
-
 def quest_2_3():
     """
     Question 2.3: Delete Middle Node
@@ -38,9 +37,6 @@ def quest_2_3():
     Input:   the node c from the linked list a->b->c->d->e
     Result:  nothing is returned, but the new linked list looks like a->b->d->e
     """
-
-
-
 
 
 def quest_2_4():
@@ -88,11 +84,40 @@ def quest_2_5():
 
 def quest_2_6():
     """
-    Question 1.6: Palindrome
+    Question 2.6: Palindrome
 
     Implement a function to check if a linked list is a palindrome.
     """
 
+
+def quest_2_7():
+    """
+    Question 2.7: Intersection
+
+    Given two (singly) linked lists, determine if the two lists intersect.
+    Return the intersecting node. Note that the intersection is defined based on
+    reference, not value. That is, if the kth node of the first linked list is
+    the exact same node (by reference) as the jth node of the second linked
+    list, then they are intersecting.
+    """
+
+
+def quest_2_8():
+    """
+    Question 2.8: Loop Detection
+
+    Given a circular linked list, implement an algorithm that returns the node
+    at the beginning of the loop.
+
+    DEFINITION:
+    Circular linked list: A (corrupt) linked list in which a node's next pointer
+    points to an earlier node, so as to make a loop in the linked list.
+
+    EXAMPLE:
+
+    Input:   A -> B -> C -> D -> E -> C [the same C as earlier]
+    Output:  C
+    """
 
 
 

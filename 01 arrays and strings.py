@@ -238,6 +238,7 @@ def quest_1_6():
     else:
         print(output_str)
 
+
 def quest_1_7():
     """
     Question 1.7: Rotate Matrix
@@ -256,6 +257,7 @@ def quest_1_8():
     row and column are set to 0.
     """
 
+
 def quest_1_9():
     """
     Question 1.9: String Rotation
@@ -270,6 +272,8 @@ def quest_1_9():
     str_two = input("Please enter in a string.\n>>\t")
 
     def isSubstring(str_one, str_two):
+
+        #first check for == str len, return False is !=
 
 
 #quest_1_1()
