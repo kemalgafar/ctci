@@ -268,20 +268,53 @@ def quest_1_9():
     rotation of "erbottlewat")
     """
 
-    str_one = input("Please enter in a string.\n>>\t")
-    str_two = input("Please enter in a string.\n>>\t")
+    #VERY C-LIKE, MUST FIND A MORE PYTHONIC WAY
 
-    def isSubstring(str_one, str_two):
+	#str_one = input("Please enter in a string.\n>>\t")
+	#str_two = input("Please enter in a string.\n>>\t")
+	str_one = "eabccde"
+	str_two = "abccdee"
 
-        #first check for == str len, return False is !=
+	def isSubstring(str_one, str_two):
+	    is_sub_str = True
+	    i = 0
+	    j = 0
+	    ind = 0
 
+	    if len(str_one) != len(str_two):
+	        is_sub_str = False
+	    else:
+	        while ind < len(str_one):
+	            if j >= 0:
+	                while str_one[i] != str_two[j]:
+	                    j += 1
+	            while str_one[i] == str_two[j]: ##
+	                if i == (len(str_one) - 1):
+	                    break
+	                i += 1
+	                j += 1
+	                while j == (len(str_one) - 1):
+	                    i += 1
+	                    j = 0
+	            if i == (len(str_one) -1):
+	                break
+	            else:
+	                is_sub_str = False
+	                ind += 1
+	    print(is_sub_str)
 
+	isSubstring(str_one, str_two)
+	#print(isSubstring(str_one, str_two))
+
+#Make a dictionary carousel where you ask which function to run
+#have the carousel display the docstring and then call the test script
+#well, each func will call the test itself
 #quest_1_1()
 #quest_1_2()
 #quest_1_3()
 #quest_1_4()
 #quest_1_5()
 #quest_1_6()
-
-
+#quest_1_7()
+#quest_1_8()
 #quest_1_9()
