@@ -269,42 +269,45 @@ def quest_1_9():
     """
 
     #VERY C-LIKE, MUST FIND A MORE PYTHONIC WAY
+    #SOLUTION IS WRONG, LESS THAN 2 ERRORS ARE NOT PICKED UP
+    #str_one = input("Please enter in a string.\n>>\t")
+    #str_two = input("Please enter in a string.\n>>\t")
+    str_one = "waterbottle"
+    str_two = "erbottlewex"
 
-	#str_one = input("Please enter in a string.\n>>\t")
-	#str_two = input("Please enter in a string.\n>>\t")
-	str_one = "eabccde"
-	str_two = "abccdee"
+    def isSubstring(str_one, str_two):
+        is_sub_str = True
+        i = 0
+        j = 0
+        ind = 0
+        if len(str_one) != len(str_two):
+            is_sub_str = False
+        else:
+            while ind < len(str_one):
+                if j >= 0:
+                    while str_one[i] != str_two[j]:
+                        j += 1
+                        if j >= len(str_one):
+                            j = 0
+                            break
+                while str_one[i] == str_two[j]: ##
+                    if i == (len(str_one) - 1):
+                        break
+                    i += 1
+                    j += 1
+                    if i != j:
+                        while j >= (len(str_one) - 1):
+                            i += 1
+                            j = 0
+                if i == (len(str_one) -1):
+                    break
+                else:
+                    is_sub_str = False
+                    ind += 1
+        print(is_sub_str)
+    isSubstring(str_one, str_two)
+    #print(isSubstring(str_one, str_two))
 
-	def isSubstring(str_one, str_two):
-	    is_sub_str = True
-	    i = 0
-	    j = 0
-	    ind = 0
-
-	    if len(str_one) != len(str_two):
-	        is_sub_str = False
-	    else:
-	        while ind < len(str_one):
-	            if j >= 0:
-	                while str_one[i] != str_two[j]:
-	                    j += 1
-	            while str_one[i] == str_two[j]: ##
-	                if i == (len(str_one) - 1):
-	                    break
-	                i += 1
-	                j += 1
-	                while j == (len(str_one) - 1):
-	                    i += 1
-	                    j = 0
-	            if i == (len(str_one) -1):
-	                break
-	            else:
-	                is_sub_str = False
-	                ind += 1
-	    print(is_sub_str)
-
-	isSubstring(str_one, str_two)
-	#print(isSubstring(str_one, str_two))
 
 #Make a dictionary carousel where you ask which function to run
 #have the carousel display the docstring and then call the test script
@@ -317,4 +320,4 @@ def quest_1_9():
 #quest_1_6()
 #quest_1_7()
 #quest_1_8()
-#quest_1_9()
+quest_1_9()
