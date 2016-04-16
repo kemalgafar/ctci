@@ -63,7 +63,7 @@ def quest_4_6():
 
 def quest_4_7():
     """
-    Question 4.7: Rotate Matrix
+    Question 4.7: Build Order
 
 
     """
@@ -71,7 +71,7 @@ def quest_4_7():
 
 def quest_4_8():
     """
-    Question 4.8: Zero Matrix
+    Question 4.8: First Common Ancestor
 
 
     """
@@ -79,7 +79,7 @@ def quest_4_8():
 
 def quest_4_9():
     """
-    Question 4.9: String Rotation
+    Question 4.9: BST Sequences
 
 
     """

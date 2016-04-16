@@ -2,6 +2,9 @@
 
 """
 NOTES:
+http://interactivepython.org/runestone/static/pythonds/BasicDS/ImplementinganUnorderedListLinkedLists.html
+
+
 """
 
 def quest_2_1():
@@ -14,6 +17,8 @@ def quest_2_1():
 
     How would you solve this problem if a temporary buffer is not allowed?
     """
+
+
 
 
 def quest_2_2():
@@ -118,6 +123,10 @@ def quest_2_8():
     Input:   A -> B -> C -> D -> E -> C [the same C as earlier]
     Output:  C
     """
+
+    #impliment with a dictionary have the data "a,b,c..." be the key, and the index of the LL be the value
+    #if the key already exists then you know where/what the corruption is
+    
 
 
 
